@@ -109,27 +109,43 @@ class Note extends FlxSprite
 	public var scaleToUse:Float = 1;
 	public var curMania:Int = 0; 
 	public var changesMania:Bool = false;
+public static var ammoToMania:Array<Int> = [
+	0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+	10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+	20, 21, 22, 23, 24, 25
+];
 
-	public static var ammoToMania:Array<Int> = [0, 6, 7, 8, 0, 3, 1, 4, 5, 2];
-	public static var noteScales:Array<Float> = [0.7, 0.6, 0.5, 0.65, 0.58, 0.55, 0.7, 0.7, 0.7];
-	public static var pixelNoteScales:Array<Float> = [1, 0.83, 0.7, 0.9, 0.8, 0.74, 1, 1, 1];
-	public static var noteWidths:Array<Float> = [112, 84, 66.5, 91, 77, 70, 140, 126, 119];
-	public var sustainXOffset:Float = 1;
+public static var noteScales:Array<Float> = [
+	0.7, 0.68, 0.66, 0.64, 0.62, 0.6, 0.58, 0.56, 0.54, 0.52,
+	0.5, 0.48, 0.46, 0.44, 0.42, 0.4, 0.38, 0.36, 0.34, 0.32,
+	0.3, 0.28, 0.26, 0.24, 0.22, 0.2
+];
 
-	////////////////////////////////////////////////////////////
+public static var pixelNoteScales:Array<Float> = [
+	1, 0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55,
+	0.5, 0.45, 0.4, 0.35, 0.3, 0.25, 0.2, 0.15, 0.1, 0.08,
+	0.06, 0.04, 0.03, 0.02, 0.01, 0.01
+];
 
-	//note anim stuff
-	public static var frameN:Array<Dynamic> = [ //changed so i dont have to have a ton of case statements
-		['purple', 'blue', 'green', 'red'],
-		['purple', 'green', 'red', 'yellow', 'blue', 'dark'],
-		['purple', 'blue', 'green', 'red', 'white', 'yellow', 'violet', 'darkred', 'dark'],
-		['purple', 'blue', 'white', 'green', 'red'],
-		['purple', 'green', 'red', 'white', 'yellow', 'blue', 'dark'],
-		['purple', 'blue', 'green', 'red', 'yellow', 'violet', 'darkred', 'dark'],
-		['white'],
-		['purple', 'red'],
-		['purple', 'white', 'red']
-	];
+public static var noteWidths:Array<Float> = [
+	120, 118, 116, 114, 112, 110, 108, 106, 104, 102,
+	100, 98, 96, 94, 92, 90, 88, 86, 84, 82,
+	80, 78, 76, 74, 72, 70
+];
+
+public var sustainXOffset:Float = 1;
+
+// note anim stuff
+public static var frameN:Array<Dynamic> = [
+	// You can replace these names with whatever is defined in your spritesheet
+	[
+		'purple', 'blue', 'green', 'red', 'yellow', 'white', 'dark', 'violet',
+		'darkred', 'orange', 'cyan', 'magenta', 'lime', 'pink', 'aqua', 'brown',
+		'silver', 'gold', 'sky', 'midnight', 'jade', 'maroon', 'crimson', 'teal',
+		'lavender', 'coral'
+	]
+];
+
 	public static var GFframeN:Array<String> = ['purple', 'blue', 'green', 'red']; //gf cant have more than 4k
 
 	////////////////////////////////////////////////////////////
